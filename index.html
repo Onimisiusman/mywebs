@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Meedo Graphic — portfolio of brand identity, poster and digital design by Meedo (Usman)." />
   <title>Meedo Graphic — Portfolio</title>
   <link rel="stylesheet" href="md.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -47,24 +48,27 @@
          <div class="social-links">
   <!-- Instagram -->
   <a href="https://www.instagram.com/usmanhameed302?igsh=aWRjMjg1eGpmcWNn"
-     target="_blank"
-     aria-label="Instagram"
-     class="social-icon instagram">
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    class="social-icon instagram">
     <i class="fab fa-instagram"></i>
   </a>
 
   <!-- Behance -->
   <a href="#"
-     target="_blank"
-     aria-label="Behance"
-     class="social-icon behance">
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Behance"
+    class="social-icon behance">
     <i class="fab fa-behance"></i>
 </a>
      <!-- Dribbble -->
   <a href="#"
-     target="_blank"
-     aria-label="Dribbble"
-     class="social-icon dribbble">
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Dribbble"
+    class="social-icon dribbble">
     <i class="fab fa-dribbble"></i>
   
   </a>
@@ -81,7 +85,7 @@
       <div class="about-inner">
         <div class="about-text">
           <h2>About Me</h2>
-          <p>I’m a visual problem solver focused on brand identity, packaging, and digital design.I blend simplicity with bold visual language to make designs that communicate clearly and look great across platforms.</p>
+          <p>I’m a visual problem solver focused on brand identity, packaging, and digital design. I blend simplicity with bold visual language to make designs that communicate clearly and look great across platforms.</p>
           <ul class="skills">
             <li>Logo & Brand Identity</li>
             <li>Poster & Print Design</li>
@@ -113,7 +117,7 @@
 
             <div class="card-actions">
               <div class="like-wrap">
-                <button class="like-btn" aria-label="Like this work">❤️</button>
+                <button class="like-btn" aria-label="Like this work" aria-pressed="false">❤️</button>
                 <span class="like-count">0</span>
               </div>
 
@@ -132,7 +136,7 @@
             <p class="card-sub">Poster / Print</p>
             <div class="card-actions">
               <div class="like-wrap">
-                <button class="like-btn" aria-label="Like this work">❤️</button>
+                <button class="like-btn" aria-label="Like this work" aria-pressed="false">❤️</button>
                 <span class="like-count">0</span>
               </div>
               <a class="see-more" href="work2.html">See More →</a>
@@ -150,7 +154,7 @@
             <p class="card-sub">Social / Digital</p>
             <div class="card-actions">
               <div class="like-wrap">
-                <button class="like-btn" aria-label="Like this work">❤️</button>
+                <button class="like-btn" aria-label="Like this work" aria-pressed="false">❤️</button>
                 <span class="like-count">0</span>
               </div>
               <a class="see-more" href="work3.html">See More →</a>
@@ -168,7 +172,7 @@
             <p class="card-sub">Identity / Packaging</p>
             <div class="card-actions">
               <div class="like-wrap">
-                <button class="like-btn" aria-label="Like this work">❤️</button>
+                <button class="like-btn" aria-label="Like this work" aria-pressed="false">❤️</button>
                 <span class="like-count">0</span>
               </div>
               <a class="see-more" href="work4.html">See More →</a>
@@ -185,7 +189,7 @@
             <p class="card-sub">Logo / Flyer </p>
             <div class="card-actions">
               <div class="like-wrap">
-                <button class="like-btn" aria-label="Like this work">❤️</button>
+                <button class="like-btn" aria-label="Like this work" aria-pressed="false">❤️</button>
                 <span class="like-count">0</span>
               </div>
               <a class="see-more" href="work5.html">See More →</a>
@@ -202,9 +206,9 @@
       <p>Interested in working together? Send a message.</p>
 
       <form id="contactForm" class="contact-form" novalidate>
-        <input id="name" type="text" placeholder="Your name" required>
-        <input id="email" type="email" placeholder="Your email" required>
-        <textarea id="message" placeholder="Your message" required></textarea>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
         <button type="submit" class="btn primary">Send Message</button>
         <p id="formResponse" class="form-response" aria-live="polite"></p>
       </form>
@@ -218,5 +222,13 @@
   </footer>
 
   <script src="md.js"></script>
+  <script>
+    (function(){
+      var y = document.getElementById('year');
+      if (y && !y.textContent.trim()) {
+        y.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
 </body>
 </html>
